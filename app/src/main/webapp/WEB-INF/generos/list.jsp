@@ -5,26 +5,29 @@
     <head>
         <meta charset="UTF-8" />
         <title>Gêneros</title>
+        <link href="/css/bootstrap.min.css" rel="stylesheet" />
     </head>
     <body>
-        <h1>Gêneros</h1>
-            <a href="/generos/insert">Novo Gênero</a>
-            <table>
-                <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>&nbsp;</th>
-                </tr>
-                <c:forEach var="item" items="${generos}">
+        <div class="container">
+            <h1>Gêneros</h1>
+                <a href="/generos/insert" class="btn btn-primary">Novo Gênero</a>
+                <table class="table">
                     <tr>
-                        <td>${item.id}</td>
-                        <td>${item.nome}</td>
-                        <td>
-                            <a href="/generos/update?id=${item.id}">Editar</a>
-                            <a href="/generos/delete?id=${item.id}">Excluir</a>
-                        </td>
+                        <th>Id</th>
+                        <th>Nome</th> 
+                        <th>&nbsp;</th>
                     </tr>
-                </c:forEach>
-            </table>
+                    <c:forEach var="item" items="${generos}">
+                        <tr>
+                            <td>${item.id}</td>
+                            <td>${item.nome}</td>
+                            <td>
+                                <a href="/generos/update?id=${item.id}" class="btn btn-secondary">Editar</a>
+                                <a href="/generos/delete?id=${item.id}" class="btn btn-danger">Excluir</a>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </table>
+        </div>
     </body>
 </html>
