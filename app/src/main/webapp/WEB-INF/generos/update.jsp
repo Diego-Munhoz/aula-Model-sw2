@@ -15,8 +15,8 @@
                     <label class="form-label" >Nome:</label>
                     <input type="text" name="nome" value="${genero.nome}" class="form-control" />
                 </div>
-                <a href="/generos/list" class="bnt btn-secondary">Voltar</a>
-                <button type="submit" class="btn bnt- bnt-warning">Salvar Alterações</button>
+                <a href="/generos/list" class="btn btn-primary">Voltar</a>
+                <button type="submit" class="btn btn-success">Salvar Alterações</button>
             </form>
         </div>
     </body>

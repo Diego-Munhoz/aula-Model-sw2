@@ -16,7 +16,7 @@
                     <br>
                 </div>
                 <a href="/generos/list" class="btn btn-secondary">Voltar</a>
-                <button type="submit" class="btn bnt-sucess">Salvar</button>
+                <button type="submit" class="btn bnt-success">Salvar</button>
             </form>
         </div>
     </body>
