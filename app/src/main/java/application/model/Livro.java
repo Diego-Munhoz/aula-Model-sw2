@@ -1,44 +1,49 @@
 package application.model;
 
-import java.util.Set;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "generos")
-public class Genero {
+@Table(name = "livros")
+public class Livro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(nullable = false)
-    private String nome;
+    private String titulo;
 
-    @OneToMany(mappedBy = "genero")
-    private Set<Livro> livros;
+    @ManyToOne
+    @JoinColumn(name = "id_genero", nullable = false)
+    private Genero genero;
 
     public long getId() {
         return id;
     }
+
     public void setId(long id) {
         this.id = id;
     }
-    public String getNome() {
-        return nome;
+
+    public String getTitulo() {
+        return titulo;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
-    public Set<Livro> getLivros() {
-        return livros;
+
+    public Genero getGenero() {
+        return genero;
     }
-    public void setLivros(Set<Livro> livros) {
-        this.livros = livros;
+
+    public void setGenero(Genero genero) {
+        this.genero = genero;
     }
 
     

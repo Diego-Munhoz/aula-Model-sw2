@@ -8,6 +8,7 @@
     </head>
     <body>
         <div class="container">
+            <br>
             <h1>Editar Gênero</h1>
             <form action="/generos/update" method="post">
                 <input type="hidden" name="id" value="${genero.id}" />

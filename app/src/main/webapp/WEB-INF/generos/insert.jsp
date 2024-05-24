@@ -8,6 +8,7 @@
     </head>
     <body>
         <div class="container">
+            <br>
             <h1>Novo Gênero</h1>
             <form action="/generos/insert" method="post">
                 <div>
@@ -16,7 +17,7 @@
                     <br>
                 </div>
                 <a href="/generos/list" class="btn btn-secondary">Voltar</a>
-                <button type="submit" class="btn bnt-success">Salvar</button>
+                <button type="submit" class="btn btn-success">Salvar</button>
             </form>
         </div>
     </body>

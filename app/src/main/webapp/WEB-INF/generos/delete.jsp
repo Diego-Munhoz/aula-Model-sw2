@@ -8,6 +8,7 @@
     </head>
     <body>
         <div class="container">
+            <br>
             <h1>Deletar Gênero</h1>
             <p>Tem certeza que deseja remover o Gênero ${genero.nome}</p>
             <form action="/generos/delete" method="post">
